@@ -1,7 +1,4 @@
-# User-Activity-DT-App
-Dynatrace App (my.user.activity.monitor) v1.0.5 - Monitors user activity and sends support requests to Email.
-
-## User Activity Monitor
+## User Activity DT App
 
 This Dynatrace app monitors user activity and sends support requests directly to Email.
 
@@ -40,5 +37,25 @@ Follow these step-by-step instructions to install and configure the User Activit
 6. Click the **New host pattern** (or **Add item**) button.
 7. In the input field that appears, type exactly: `live2.dreamcast.in`
 8. Click the **Save changes** button at the bottom of the screen. *(Note: It may take up to 10 seconds for the networking changes to fully propagate across the environment).*
+
+### ⚙️ Workflow Deployment Instructions
+
+This release includes two automation workflows required for the app's full functionality (such as sending support emails and syncing leaderboard data). Follow these steps to import them into your Dynatrace environment.
+
+#### Step 1: Download the Workflow Files
+1. Scroll down to the **Assets** section at the bottom of this release page.
+2. Download the two attached `.json` workflow files to your local computer. *(Do not open or modify the code inside these files).*
+
+#### Step 2: Open the Workflows App
+1. Log in to your **Dynatrace environment** (`https://<your-environment-id>.apps.dynatrace.com/`).
+2. Click the **Dynatrace Launcher** (the grid icon in the top-left corner).
+3. Search for and open the **Workflows** app.
+
+#### Step 3: Upload the Workflows
+1. On the main Workflows screen, look near the top-right corner for the **Upload** button (right next to the "New workflow" button).
+2. Click **Upload** and select the first `support-email-ai-reliability-lab.workflow.json` workflow file you downloaded.
+3. The workflow will automatically open in the Dynatrace Workflow Editor. 
+4. Click the **Deploy** button in the bottom right corner to save it to your environment.
+5. Repeat this process for the second `uam-daily-leaderboard-sender.workflow.json` workflow file.
 
 🎉 **Installation Complete!** You can now launch the **User Activity Monitor** app from your Dynatrace Launcher.
