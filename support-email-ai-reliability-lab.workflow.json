@@ -1,0 +1,35 @@
+{
+  "id": "b88ee161-6b06-42b8-a67b-66155103ca2d",
+  "title": "Support Email - AI Reliability Lab",
+  "description": "",
+  "actor": "1a8894eb-9583-4522-8903-fd231053f3d8",
+  "owner": "1a8894eb-9583-4522-8903-fd231053f3d8",
+  "ownerType": "USER",
+  "isPrivate": true,
+  "schemaVersion": 4,
+  "trigger": {},
+  "result": null,
+  "type": "STANDARD",
+  "input": {},
+  "hourlyExecutionLimit": 1000,
+  "guide": null,
+  "tasks": {
+    "send_email": {
+      "name": "send_email",
+      "input": {
+        "cc": [],
+        "to": [
+          "{{ execution().params.recipient }}"
+        ],
+        "bcc": [],
+        "content": "{{ execution().params.content }}",
+        "subject": "{{ execution().params.subject }}"
+      },
+      "action": "dynatrace.email:send-email",
+      "position": {
+        "x": 0,
+        "y": 1
+      }
+    }
+  }
+}
